@@ -1,0 +1,187 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:linear-gradient(135deg,#dbeafe,#bfdbfe,#93c5fd);
+  font-family:Arial,sans-serif;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  color:#111827;
+}
+
+.container{
+  text-align:center;
+}
+
+h1{
+  margin-bottom:20px;
+  font-size:42px;
+  color:#1e3a8a;
+}
+
+.top-bar{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.top-bar div{
+  background:white;
+  padding:10px 15px;
+  border-radius:12px;
+  font-weight:bold;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.levels{
+  margin-bottom:20px;
+}
+
+.levels button{
+  margin:5px;
+  padding:10px 15px;
+  border:none;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.levels button:hover{
+  transform:scale(1.05);
+  background:#1d4ed8;
+}
+
+#board{
+  width:460px;
+  display:grid;
+  grid-template-columns:repeat(9,1fr);
+  gap:2px;
+  background:#1e3a8a;
+  padding:5px;
+  border-radius:15px;
+  margin:auto;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.cell{
+  width:48px;
+  height:48px;
+  background:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:22px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.cell:hover{
+  background:#dbeafe;
+}
+
+.fixed{
+  background:#bfdbfe;
+  color:#1e3a8a;
+}
+
+.selected{
+  background:#facc15 !important;
+}
+
+.wrong{
+  background:#ef4444 !important;
+  color:white;
+}
+
+.hint-cell{
+  background:#86efac !important;
+}
+
+.numbers{
+  margin-top:20px;
+}
+
+.numbers button,
+.buttons button{
+  width:50px;
+  height:50px;
+  margin:5px;
+  border:none;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.numbers button:hover,
+.buttons button:hover{
+  transform:scale(1.08);
+  background:#1d4ed8;
+}
+
+.erase{
+  background:#dc2626 !important;
+}
+
+.buttons{
+  margin-top:15px;
+}
+
+#message{
+  margin-top:20px;
+  font-size:24px;
+  font-weight:bold;
+  color:#b91c1c;
+}
+
+#newGameBtn{
+  display:none;
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:12px;
+  background:#16a34a;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#newGameBtn:hover{
+  background:#15803d;
+}
+
+@media(max-width:600px){
+
+  #board{
+    width:330px;
+  }
+
+  .cell{
+    width:34px;
+    height:34px;
+    font-size:18px;
+  }
+
+  .numbers button,
+  .buttons button{
+    width:40px;
+    height:40px;
+    font-size:16px;
+  }
+}

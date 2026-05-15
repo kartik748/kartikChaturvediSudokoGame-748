@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sudoku Master</title>
+
+  <link rel="stylesheet" href="sudoko.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🧩 Sudoku Master</h1>
+
+    <div class="top-bar">
+
+      <div id="timer">⏱ Time: 0:00</div>
+
+      <div id="score">🏆 Score: 0</div>
+
+      <div id="mistakes">❌ Mistakes: 0/3</div>
+
+      <div id="hints">💡 Hints: 3</div>
+
+    </div>
+
+    <div class="levels">
+
+      <button onclick="changeLevel('easy')">Easy</button>
+
+      <button onclick="changeLevel('moderate')">Moderate</button>
+
+      <button onclick="changeLevel('difficult')">Difficult</button>
+
+      <button onclick="changeLevel('expert')">Expert</button>
+
+      <button onclick="changeLevel('master')">Master</button>
+
+    </div>
+
+    <div id="board"></div>
+
+    <div class="numbers">
+
+      <button onclick="fillNumber(1)">1</button>
+      <button onclick="fillNumber(2)">2</button>
+      <button onclick="fillNumber(3)">3</button>
+      <button onclick="fillNumber(4)">4</button>
+      <button onclick="fillNumber(5)">5</button>
+      <button onclick="fillNumber(6)">6</button>
+      <button onclick="fillNumber(7)">7</button>
+      <button onclick="fillNumber(8)">8</button>
+      <button onclick="fillNumber(9)">9</button>
+
+      <button class="erase" onclick="eraseNumber()">X</button>
+
+    </div>
+
+    <div class="buttons">
+
+      <button onclick="useHint()">💡 Hint</button>
+
+    </div>
+
+    <p id="message"></p>
+
+    <button id="newGameBtn" onclick="newGame()">
+      🎮 Start New Game
+    </button>
+
+  </div>
+
+  <script src="sudoko.js"></script>
+
+</body>
+</html>
